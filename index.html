@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nazımcan İslam">
+
+    <!-- Set Title -->
+    <title>Tic Tac Toe Game</title>
+
+    <!-- Load style file -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Load Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Load Open Sans font from fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Back home button -->
+    <button id="back-home-button" title="Back home">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <!-- Starting game page -->
+    <div id="starting-game">
+        <div id="user-role-select">
+            <!-- X box -->
+            <div class="role-box" id="role-x">
+                <i class="fa-solid fa-x"></i>
+            </div>
+
+            <!-- O box -->
+            <div class="role-box" id="role-o">
+                <i class="fa-solid fa-o"></i>
+            </div>
+        </div>
+
+        <div id="user-vs-computer-info-box">
+            <h1>Choose One</h1>
+        </div>
+    </div>
+
+    <!-- Game page -->
+    <div id="game-page"></div>
+
+    <!-- End game page -->
+    <div id="end-game-page">
+        <div id="black-cover"></div>
+        <div id="end-game-messagebox">
+            <h1 id="result-header">You won!</h1>
+            <button id="go-to-home-button" class="button">Go to Home</button>
+            <button id="play-again-button" class="button">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Load script file -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

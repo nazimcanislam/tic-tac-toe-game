@@ -1,0 +1,195 @@
+/*
+Author: Nazımcan İslam
+Coding: UTF-8
+License: MIT
+*/
+
+/* Define global values */
+:root {
+    --bg-color: #16a085;
+    --role-color: #ffffff;
+    --role-x-bg-color: #e74c3c;
+    --role-x-bg-color-hover: #c0392b;
+    --role-o-bg-color: #3498db;
+    --role-o-bg-color-hover: #2980b9;
+    --game-select-box-bg-color: #1abc9c;
+    --game-role-x-color: #ecf0f1;
+    --game-role-o-color: #2c3e50;
+    --button-bg-color: #3498db;
+    --button-bg-color-hover: #2980b9;
+}
+
+/* Common reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------- START PAGE ---------------- */
+#starting-game {
+    display: block;
+    max-width: 550px;
+    width: 100%;
+}
+
+#starting-game #user-role-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+#starting-game #user-role-select .role-box i {
+    font-size: 100px;
+    background-color: grey;
+    padding: 64px 80px;
+    border-radius: 8px;
+    color: var(--role-color);
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+}
+
+#starting-game #user-role-select #role-x i {
+    background-color: var(--role-x-bg-color);
+}
+
+#starting-game #user-role-select #role-x i:hover {
+    background-color: var(--role-x-bg-color-hover);
+}
+
+#starting-game #user-role-select #role-o i {
+    background-color: var(--role-o-bg-color);
+}
+
+#starting-game #user-role-select #role-o i:hover {
+    background-color: var(--role-o-bg-color-hover);
+}
+
+#starting-game #user-vs-computer-info-box {
+    color: #ffffff;
+}
+
+#starting-game #user-vs-computer-info-box h1 {
+    text-align: center;
+    font-size: 48px;
+}
+/* -------------------------------------------- */
+
+/* ---------------- GAME PAGE ----------------- */
+#back-home-button {
+    display: none;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    background-color: var(--game-select-box-bg-color);
+    color: var(--bg-color);
+    font-size: 32px;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+#game-page {
+    width: 100vw;
+    display: none;
+    /* display: grid; */
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 20px;
+}
+
+#game-page .game-select-box {
+    background-color: var(--game-select-box-bg-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-page .game-select-box i {
+    font-size: 140px;
+    color: #000000;
+}
+
+#game-page .game-select-box i.role-x {
+    color: var(--game-role-x-color);
+}
+
+#game-page .game-select-box i.role-o {
+    color: var(--game-role-o-color);
+}
+/* -------------------------------------------- */
+
+/* -------------- END GAME PAGE --------------- */
+#end-game-page {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#end-game-page #black-cover {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.3;
+    transition: all 400ms ease-in-out;
+}
+
+#end-game-page #end-game-messagebox {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, 0);
+    width: 600px;
+    padding: 32px;
+    background-color: var(--bg-color);
+    border-radius: 2px;
+    box-shadow: 0 0 0.1em #000000;
+    text-align: center;
+}
+
+#end-game-page #end-game-messagebox #result-header,
+#end-game-page #end-game-messagebox #result-values {
+    color: #ffffff;
+}
+
+#end-game-page #end-game-messagebox #result-header {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.button {
+    display: inline-block;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--button-bg-color);
+    color: #ffffff;
+    padding: 10px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--button-bg-color-hover);
+}
+/* -------------------------------------------- */
